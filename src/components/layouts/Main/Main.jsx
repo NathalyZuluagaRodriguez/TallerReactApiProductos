@@ -25,10 +25,10 @@ export const Main = () => {
   );
 
   return (
-    <main className="main-container">
-      <SearchBar  search={search} setSearch={setSearch} />
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 place-items-center">
-      {loading ? (
+    <main className="main-container flex flex-col items-center">
+      <SearchBar search={search} setSearch={setSearch} />
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8 w-full max-w-7xl px-4">
+        {loading ? (
           <p>Cargando productos...</p>
         ) : productosFiltrados.length > 0 ? (
           productosFiltrados.map((producto) => (
