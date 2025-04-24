@@ -1,7 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-export const SearchBar = () => {
+export const SearchBar = ({ search, setSearch }) => {
   return (
-    <div>SearchBar</div>
-  )
-}
+    <input
+      type="text"
+      placeholder="Buscar producto..."
+      value={search}
+      onChange={(e) => setSearch(e.target.value)}
+      className="search-input"
+    />
+  );
+};
