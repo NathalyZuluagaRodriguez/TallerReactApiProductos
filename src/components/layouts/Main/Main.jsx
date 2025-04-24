@@ -26,9 +26,9 @@ export const Main = () => {
 
   return (
     <main className="main-container">
-      <SearchBar search={search} setSearch={setSearch} />
-      <div className="grid-container">
-        {loading ? (
+      <SearchBar  search={search} setSearch={setSearch} />
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 place-items-center">
+      {loading ? (
           <p>Cargando productos...</p>
         ) : productosFiltrados.length > 0 ? (
           productosFiltrados.map((producto) => (
